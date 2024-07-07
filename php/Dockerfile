@@ -20,19 +20,19 @@ RUN apt-get update && apt-get install -y \
 RUN a2enmod rewrite
 
 # Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+#COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set COMPOSER_ALLOW_SUPERUSER to allow Composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER=1
+#ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Copy composer.json and composer.lock
-COPY composer.json composer.lock ./
+#COPY composer.json composer.lock ./
 
 # Install PHP dependencies
-RUN composer install
+#RUN composer install
 
 # Copy application files
-COPY src/ /var/www/html/
+#COPY src/ /var/www/html/
 
 # Ensure Apache can read the document root
 RUN chown -R www-data:www-data /var/www/html \
