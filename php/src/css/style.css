@@ -1,0 +1,326 @@
+/* Existing styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #012652; /* Sidebar color */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box; /* Consistent padding behavior */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #1f497d; /* Link background color */
+}
+
+.sidebar a:hover {
+    background-color: #133b68; /* Link hover color */
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 220px; /* Ensuring the content starts after the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 220px); /* Making sure the content takes up the remaining width */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.profile-settings {
+    margin-right: 20px;
+}
+
+.profile-settings a {
+    text-decoration: none;
+    color: #333;
+}
+
+.stats, .charts, .flower-management, .billing-form, .customer-management, .advance-payment, .generate-invoice, .transaction-report, .lease-advance-payment, .settings {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.stat, .chart, .top-options, .invoice-body, .overall-transactions {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.stat h3, .chart h3, .top-options h3, .invoice-body h3, .overall-transactions h3 {
+    margin: 0 0 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px 0;
+    background-color: #012652; /* Button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #133b68; /* Button hover color */
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.small-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Adjust the modal width here */
+    height: auto; /* Adjust the modal height here */
+    max-width: 500px; /* Set maximum width */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* New styles for location input */
+#location {
+    width: 15em; /* Adjust the width as per your requirement */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+ #   background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+ #   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+header h1 {
+    color: #2980b9;
+}
+.readonly-input {
+    background-color: #e9ecef;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px; /* Ensure minimum width for columns */
+}
+
+.notification {
+    display: none;
+    margin-top: 1rem;
+}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}
+    
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #012652; /* Sidebar color */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box; /* Consistent padding behavior */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #1f497d; /* Link background color */
+}
+
+.sidebar a:hover {
+    background-color: #133b68; /* Link hover color */
+    text-decoration: none;
+}
+
+.highlighted-input {
+    background-color: #f0f8ff;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection--single {
+    height: 38px !important;
+}
+.btn-container {
+    text-align: right;
+    margin-top: 20px;
+}
+.remove-button {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    align-self: center;
+}

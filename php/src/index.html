@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Sales Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 30%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #133b68;
+            color: #fff;
+        }
+          
+     body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+                
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #012652; /* Sidebar color */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box; /* Consistent padding behavior */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #1f497d; /* Link background color */
+}
+
+.sidebar a:hover {
+    background-color: #133b68; /* Link hover color */
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Bloom Software</h2>
+        
+        <a href="flowers.php">Flowers</a>
+        <a href="billing.php">Billing</a>
+        <a href="customer.php">Customers</a>
+        <?php if ($_SESSION['role'] == 'superadmin') { ?>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="advance_payment.php">Advance Payment</a>
+            <a href="lease_advances.php">Lease Advance</a>
+            <a href="settings.php">Settings</a>
+        <?php } ?>
+        <a href="generate_invoice1.php">Generate Invoice</a>
+        <a href="transaction_report.php">Transaction Report</a>
+        <a href="logout.php">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Flower Sales Report-Daily</h1>
+        <div class="dropdown">
+            <label for="location">Select Location: </label>
+            <select id="location" name="location" style="width: 30%;">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flower Name</th>
+                    <th>Quantity Sold</th>
+                </tr>
+            </thead>
+            <tbody id="sales-data">
+                <!-- Sales data will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
