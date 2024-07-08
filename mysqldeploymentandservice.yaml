@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql-deployment
+  namespace: db
 spec:
   replicas: 1
   selector:
@@ -35,11 +36,13 @@ spec:
           emptyDir: {}
       imagePullSecrets:
         - name: acr-auth
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: mysql-service
+  namespace: db
 spec:
   selector:
     app: mysql
